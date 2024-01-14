@@ -1,0 +1,110 @@
+<div class="main-services">
+    <div class="main-services-option">
+        <div class="main-services-option-visa">
+            <img src="assets\images\rectangle\visa.jpg" alt="visa">
+            <h3>Visa</h3>
+            <button mat-raise-button>Click to search</button>
+        </div>
+        <div class="main-services-option-legalservice">
+            <img src="assets\images\rectangle\legalservice.jpg" alt="legalservice">
+            <h3>Legal Service</h3>
+            <button mat-raise-button>Click to search</button>
+        </div>
+        <div class="main-services-option-fasttrack">
+            <img src="assets\images\rectangle\fasttrack.jpg" alt="fasttrack">
+            <h3>Fast track</h3>
+            <button mat-raise-button>Click to search</button>
+        </div>
+        <div class="main-services-option-tour">
+            <img src="assets\images\rectangle\tour.jpg" alt="tour">
+            <h3>Tour</h3>
+            <button mat-raise-button>Click to search</button>
+        </div>
+    </div>
+</div>
+
+<div class="main-applynow">
+    <img class="applynow-background" src="assets\images\rectangle\apply.jpg" alt="">
+    <h3>US visa to Vietnam</h3>
+    <h5>Lorem ipsum dolor sit amet conse ctetur adipiscing elit.</h5>
+    <div class="main-applynow-box">
+        <mat-form-field>
+            <mat-label class="main-applynow-box-count">
+                <img src="assets\images\icons\person-add-outline.svg" alt=""> Count
+            </mat-label>
+            <mat-select #countSelect disableRipple>
+                <mat-option value="1">Option 1</mat-option>
+                <mat-option value="2">Option 2</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>
+                <img src="assets\images\icons\time-outline.svg" alt=""> Type Visa
+            </mat-label>
+            <mat-select #typeVisaSelect disableRipple>
+                <mat-option value="1">Option 1</mat-option>
+                <mat-option value="2">Option 2</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button>Apply Now</button>
+    </div>
+</div>
+
+<!-- <div class="main-departUS">
+    <h1 class="main-departUS-title">Depart from US</h1>
+    <div class="main-departUS-list">
+        <div class="main-departUS-list-item">
+            <h1>Chùa Một Cột</h1>
+            <img src="assets\images\rectangle\chuamotcot.jpg" alt="">
+        </div>
+        <div class="main-departUS-list-item">
+            <h1>Cầu Vàng</h1>
+            <img src="assets\images\rectangle\cauvang.jpg" alt="">
+        </div>
+        <div class="main-departUS-list-item">
+            <h1>Phố Cổ Hội An</h1>
+            <img src="assets\images\rectangle\phocohoian.jpg" alt="">
+        </div>
+        <div class="main-departUS-list-item">
+            <h1>Vịnh Hạ Long</h1>
+            <img src="assets\images\rectangle\vinhhalong.jpg" alt="">
+        </div>
+    </div>
+</div>-->
+<div class="main-departVN">
+    <h1 class="main-departVN-title">Depart from Vietnam</h1>
+    <div class="main-departVN-list">
+        <div class="main-departVN-list-item">
+            <h1>White House</h1>
+            <img src="assets\images\rectangle\whitehouse.jpg" alt="">
+        </div>
+        <div class="main-departVN-list-item">
+            <h1>Mount Rushmore</h1>
+            <img src="assets\images\rectangle\mountrushmore.jpg" alt="">
+        </div>
+        <div class="main-departVN-list-item">
+            <h1>Monument Valley</h1>
+            <img src="assets\images\rectangle\monumentvalley.jpg" alt="">
+        </div>
+        <div class="main-departVN-list-item">
+            <h1>Statue Of Liberty</h1>
+            <img src="assets\images\rectangle\statueofliberty.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+
+<div class="main-popular">
+    <h3 class="main-popular-title"> Popular destinations </h3>
+    <div>
+        <ngx-slick-carousel class="main-popular-place" #slickModal="slick-carousel" [config]="slide1Config" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of slide1" class="slide">
+                <div class="slide-content">
+                    <img src="{{slide.img}}" alt="">
+                    <p>{{slide.description}}</p>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+</div>

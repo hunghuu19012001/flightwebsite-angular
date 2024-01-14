@@ -1,0 +1,96 @@
+/* footer.component.css */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #193080;
+    padding: 20px 20px 0 20px;
+}
+
+.left-column {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+.right-column {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    //margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    /* Chọn một màu phù hợp */
+    padding: 5px;
+    /* Thêm padding để tạo khoảng trắng xung quanh logo */
+    border-radius: 16px;
+}
+
+// .social-media-logo {
+//   max-width: 100%;
+//   height: auto;
+//   margin-left: 20px;
+//   margin-top: 20px;
+// }
+.media-logos {
+    display: flex;
+}
+
+.link-column {
+    flex: 1;
+}
+
+.link-column a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.link-column h3 {
+    color: #F2F2F2;
+    font-weight: 600;
+}
+
+
+/* Thiết lập phần "media-logos" */
+
+.media-logos {
+    display: flex;
+    align-items: center;
+    /* Canh giữa theo chiều dọc */
+    margin-top: 20px;
+}
+
+
+/* Thiết lập biểu tượng mạng xã hội */
+
+.media-logos a {
+    margin-right: 30px;
+    /* Khoảng cách giữa các biểu tượng */
+    color: #fff;
+    /* Màu sắc của biểu tượng khi không hover */
+    transition: color 0.3s ease;
+    /* Hiệu ứng màu khi hover */
+}
+
+.media-logos a:hover {
+    color: #007bff;
+    /* Màu sắc của biểu tượng khi hover */
+}
+
+
+/* Thiết lập kích thước của biểu tượng */
+
+.media-logos i {
+    font-size: 30px;
+    /* Kích thước biểu tượng */
+}

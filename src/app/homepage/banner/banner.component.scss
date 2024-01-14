@@ -1,0 +1,499 @@
+/* CSS cho banner */
+
+#departFromInput {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+}
+
+#arriveAtInput {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 20px;
+}
+
+////////////////////////////////////////////////////////////////////////
+.date-depart-container {
+    position: relative;
+    z-index: 3;
+    margin-left: 20px;
+    //max-height: 40px;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.date-return-container {
+    position: relative;
+    z-index: 3;
+    margin-left: -2px;
+    //max-height: 40px;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.date-depart-container-mat {
+    //height: 100%;
+    width: 200px;
+}
+
+.date-return-container-mat {
+    //height: 100%;
+    width: 200px;
+}
+
+.mat-datepicker-toggle {
+    color: #193080;
+    /* Màu của biểu tượng lịch */
+}
+
+
+/* Thêm padding và border cho input */
+
+.mat-form-field input {
+    padding: 10px;
+    //border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+
+/* Định dạng label */
+
+.mat-form-field label {
+    color: #333;
+    font-size: 14px;
+}
+
+
+/* Định dạng border khi focus */
+
+.mat-form-field.mat-focused .mat-form-field-underline::before,
+.mat-form-field.mat-focused .mat-form-field-outline-start::before,
+.mat-form-field.mat-focused .mat-form-field-outline-end::before {
+    border-color: #4CAF50;
+}
+
+// #departureDate {
+//     width: 100%;
+//     padding: 8px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     font-size: 12px;
+//     outline: none;
+//     height: 22px;
+// }
+// .date-depart-container {
+//     z-index: 3;
+//     margin-right: 10px;
+//     label {
+//         position: absolute;
+//         top: 0;
+//         //left: 50%;
+//         font-size: 12px;
+//         margin-left: 8px;
+//     }
+//     input {
+//         display: flex;
+//         align-items: flex-end !important;
+//     }
+// }
+// #returnDate {
+//     width: 100%;
+//     padding: 8px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     font-size: 12px;
+//     outline: none;
+//     height: 22px;
+// }
+// .date-return-container {
+//     z-index: 3;
+//     margin-right: 10px;
+//     label {
+//         position: absolute;
+//         top: 0;
+//         left: 50%;
+//         font-size: 12px;
+//         margin-left: -3px;
+//     }
+//     input {
+//         display: flex;
+//         align-items: flex-end !important;
+//     }
+// }
+////////////////////////////////////////////////////////////////
+#passengerDropdown {
+    width: 150px;
+    height: 56px;
+    padding: 10px;
+    //border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    //height: 48px;
+    border: none;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    margin-left: -7px;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.passenger-dropdown-menu {
+    font-size: 12px;
+    background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    position: absolute;
+    width: 129px;
+}
+
+.passenger-dropdown {
+    z-index: 4;
+    //width: 200px;
+}
+
+
+/* Style for quantity controls */
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Add some spacing and styling to +/- buttons */
+
+.quantity-controls button {
+    margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 8px;
+}
+
+
+/* Style for the "Done" button */
+
+.passenger-dropdown-menu .btn-success {
+    margin-top: 10px;
+    /* Add some top margin to separate it from the options */
+    //margin-left: 50%;
+    border-radius: 8px;
+    border: none;
+    max-width: 100%;
+    background-color: #193080;
+    color: #FFF;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.depart-dropdown {
+    position: relative;
+    width: 180px;
+    overflow: visible;
+    z-index: 1;
+    /* Đặt z-index thành một giá trị cao hơn so với các component xung quanh */
+}
+
+.arrive-dropdown {
+    position: relative;
+    width: 180px;
+    overflow: visible;
+    z-index: 2;
+    /* Đặt z-index thành một giá trị cao hơn so với các component xung quanh */
+}
+
+.depart-dropdown-menu {
+    border-radius: 5px;
+    top: 100%;
+    /* Đặt top thành 100% để dropdown xuất hiện dưới nút */
+    left: 0;
+    z-index: 1001;
+    /* Đặt z-index cao hơn dropdown để nó hiển thị trên top */
+    width: 140px;
+    position: fixed;
+    button {
+        background-color: #FFF;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+.arrive-dropdown-menu {
+    border-radius: 5px;
+    top: 100%;
+    /* Đặt top thành 100% để dropdown xuất hiện dưới nút */
+    left: 1000;
+    z-index: 1001;
+    /* Đặt z-index cao hơn dropdown để nó hiển thị trên top */
+    width: 140px;
+    position: fixed;
+    button {
+        background-color: #FFF;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+.cabin-dropdown {
+    z-index: 5;
+    margin-left: -5px;
+    //border-radius: 5px 0 5px 5px;
+}
+
+.cabin-dropdown button {
+    background-color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 120px;
+    height: 56px;
+}
+
+#cabinDropdown {
+    background-color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 135px;
+    height: 56px;
+    border: 1px solid #ccc;
+    margin-left: -7px;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cabin-dropdown-menu {
+    font-size: 12px;
+    background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    position: absolute;
+    width: 100px;
+}
+
+.cabin-dropdown-menu button {
+    border: none;
+}
+
+//-------------------------------------------------------------------
+.banner {
+    position: relative;
+    height: 500px;
+    //overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    /* Set the max-width to 913px */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+    /* Adjust padding as needed */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    //background-blend-mode: normal, multiply, normal;
+    object-position: 0 -300px;
+}
+
+.banner-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-100, #FFF);
+    text-align: center;
+    text-shadow: 0px 1px 20px rgba(0, 0, 0, 3);
+}
+
+.banner-title {
+    width: 737px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    width: 737px;
+}
+
+.banner-subtitle {
+    width: 413px;
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+///css action 
+.banner-actions {
+    position: absolute;
+    //bottom: 10px;
+    top: 290px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    //justify-content: space-between;
+    /* Các nút sẽ được căn cách đều */
+    width: 100%;
+    /* Đảm bảo chiều rộng của banner-actions là 100% */
+    //height: 48px;
+    max-width: 1200px;
+    max-height: 56px;
+}
+
+.banner-actions input {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    /* Không có khoảng trắng ở bên phải */
+    width: 133px;
+    /* Chiều rộng của mỗi button*/
+    background-color: #FFF;
+    font-size: 12px;
+    border: none;
+    //box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.banner-actions input img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    /* Khoảng cách giữa biểu tượng và văn bản */
+}
+
+.banner-actions input:last-child {
+    width: 94px;
+    /* Chiều rộng của nút search */
+}
+
+//   /* CSS cho thanh ngang */
+//   .divider {
+//     height: 2px;
+//     background-color: #142D53;
+//     margin: 20px 0;
+//   }
+.banner-actionstype {
+    position: absolute;
+    //bottom: 58px;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    //width: 100%;
+    // height: auto;
+    // max-width: auto;
+    flex-direction: row;
+}
+
+.banner-actionstype button {
+    //display: flex;
+    align-items: center;
+    width: 136px;
+    /* Chiều rộng của mỗi button*/
+    height: 48px;
+    font-size: 12px;
+    border: none;
+}
+
+.actionstype-rt {
+    padding: 10px 20px;
+    //gap: 10px;
+    color: #FFF;
+    border-radius: 12px 12px 0px 0px;
+    background: var(--Primary, #193080);
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+    margin-right: -20px;
+    z-index: 2;
+}
+
+.actionstype-ow {
+    padding: 15px 16px 15px 20px;
+    border-radius: 0px 12px 0px 0px;
+    background: #E3ECFA;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+    margin-right: -20px;
+    z-index: 1;
+}
+
+.actionstype-mc {
+    padding: 15px 16px 15px 22px;
+    border-radius: 0px 12px 0px 0px;
+    background: #E3ECFA;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.25);
+}
+
+//////form components
+.dropdown-content {
+    //display: none;
+    //position: absolute;
+    background-color: red;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content input {
+    padding: 8px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dropdown-content button {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search {
+    border: none;
+    width: 120px;
+    align-items: center;
+    margin-left: -5px;
+    z-index: 6;
+    font-size: 16px;
+}
+
+.multi {
+    position: absolute;
+    //bottom: 10px;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    //justify-content: space-between;
+    /* Các nút sẽ được căn cách đều */
+    width: 100%;
+    /* Đảm bảo chiều rộng của banner-actions là 100% */
+    //height: 48px;
+    max-width: 1200px;
+    max-height: 56px;
+}

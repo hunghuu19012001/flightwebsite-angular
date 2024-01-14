@@ -1,0 +1,16 @@
+<!-- slider.component.html -->
+<div class="slider">
+    <div id="slide">
+      <div *ngFor="let item of items" class="item" [style.backgroundImage]="'url(' + item.image + ')'">
+        <div class="content">
+          <div class="name">{{ item.name }}</div>
+          <div class="des">{{ item.description }}</div>
+          <button>See more</button>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button (click)="prevSlide()"><i class="fa-solid fa-angle-left"></i></button>
+      <button (click)="nextSlide()"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+  </div>

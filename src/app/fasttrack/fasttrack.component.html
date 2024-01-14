@@ -1,0 +1,161 @@
+<app-toolbar></app-toolbar>
+<div class="fasktrack-all">
+    <h1>Fast Track Service in Viet Nam</h1>
+    <img src="assets\images\test-fasttrack.jpg" alt="">
+    <div class="fasktrack-bg">
+
+        <div class="fasttrack-content">
+
+            <div class="fasktrack-highlight">
+                <div class="head-title">
+                    <div class="col-line"></div>
+                    <h3>Highlights</h3>
+                </div>
+                <ul>
+                    <li>Be escorted as a very important person</li>
+                    <li>No long queue to check in flight and get through passport control area at Vietnam airport for departure</li>
+                    <li>No worry with heavy luggage after a long journey</li>
+                    <li>Safe and sound and punctual with our professional driver</li>
+                </ul>
+            </div>
+
+
+            <div class="what-to-expect">
+                <div class="head-title">
+                    <div class="col-line"></div>
+                    <h3>What to expect</h3>
+                </div>
+
+                <p>
+                    Make the most out of your visit to Vietnam and skip the long lines at the immigration area of the airport with this Standard Fast-Track Service. Giving you access to the Priority Immigration Lane, you'll be able to reduce the boredom of waiting, as well
+                    as the large crowds! Simply book the service on the 2VNTravel website/app, indicate your flight number and time arrival and get instant confirmation! Once you're at the airport, you'll be greeted by a friendly staff member holding
+                    a sign with your name on it, who will guide you through the formalities at the airport, including passing through customs with the convenient Priority Immigration Lane, guaranteeing a hassle-free experience at the airport.
+                </p>
+            </div>
+
+            <div class="good-to-know">
+                <div class="head-title">
+                    <div class="col-line"></div>
+                    <h3>Good to know</h3>
+                </div>
+
+                <ul>
+                    <h5>Confirmation</h5>
+                    <li>You'll get confirmation within minutes. If you don't see any confirmation, reach out to our customer support.</li>
+                    <h5>Eligibility</h5>
+                    <li>Children aged 5+ will be charged the same rate as adults</li>
+                    <li>Children below 5 years old is free of charge and must be accompanied by 1 paying adult. If you have children under 5 years old, please provide your child's full name, nationality and year of birth at check out page</li>
+                    <h5>Additional information</h5>
+                    <li>Disclaimer: Klook and local operator will not hold any responsibility related to VISA issue of customer. The fast track service is not included Visa service</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="book-box">
+            <div>
+                <div class="book-box-price">
+                    <span class="book-box-price-detail">$60</span>
+                    <!-- <span class="book-box-price-cross">$70</span> -->
+                </div>
+            </div>
+            <div class="book-box-button">
+                <button>Book now</button>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <!--      -->
+    <div class="head-title">
+        <div class="col-line"></div>
+        <h3>Book Fast track</h3>
+    </div>
+    <div class="fasttrack-container-all">
+        <div class="fasttrack-container-all-bg">
+            <div class="fasttrack-container">
+
+
+                <form id="bookingForm">
+                    <!-- <label for="">Book Fast track</label> -->
+                    <div class="arrival-date">
+                        <mat-form-field>
+                            <mat-label>Arrival date</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="airport">
+                        <mat-form-field>
+
+                            <mat-label>Airport</mat-label>
+                            <mat-select>
+                                <mat-option value="one">Tan Son Nhat International Airport (SGN)</mat-option>
+                                <mat-option value="two">Noi Bai International Airport (HAN)</mat-option>
+                                <mat-option value="three">Da Nang International Airport (DAD)</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                    </div>
+                    <div class="numberflight">
+                        <mat-form-field>
+                            <mat-label>Flight number</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="arrival-time">
+                        <div class="custom-theme-example">
+                            <input placeholder="Time arrival" aria-label="Custom theme" [ngxTimepicker]="darkPicker" readonly>
+                            <ngx-material-timepicker #darkPicker [theme]="darkTheme"></ngx-material-timepicker>
+                        </div>
+
+                    </div>
+
+                    <div class="price-total">
+                        <p>${{ totalPrice }}</p>
+
+                    </div>
+
+                    <div class="passenger">
+                        <label for="passengers">Number passenger</label>
+                        <div class="passenger-input">
+                            <button mat-button (click)="decrementPassengers()">-</button>
+                            <input matInput type="number" id="passengers" name="passengers" [(ngModel)]="passengers" min="1" required>
+                            <button mat-button (click)="incrementPassengers()">+</button>
+                        </div>
+
+                    </div>
+
+                    <button class="booknow" type="button" onclick="bookNow()">Book Now</button>
+                </form>
+
+                <!-- <div class="fasttrack-package-detail">
+        <div class="fasttrack-package-detail-title">Package details</div>
+        <div class="fasttrack-package-detail-body">
+            <div class="fasttrack-package-detail-content">
+                
+            </div>
+        </div>
+    </div> -->
+
+            </div>
+        </div>
+    </div>
+    <div class="head-title">
+        <div class="col-line"></div>
+        <h3>Location</h3>
+    </div>
+
+
+    <div class="head-title">
+        <div class="col-line"></div>
+        <h3>Review</h3>
+    </div>
+</div>
+<app-footer></app-footer>

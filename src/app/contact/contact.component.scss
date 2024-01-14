@@ -1,0 +1,115 @@
+/* Reset some default styles */
+
+body,
+h1,
+h2,
+h3,
+p,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Apply a background color to the body for better readability */
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Style the contact container */
+
+.contact-container {
+    display: flex;
+    max-width: 100%;
+    height: 100vh;
+    background-image: url('/assets/images/bgcontact.jpg');
+    /* Updated image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    /* Set text color to white for better contrast */
+}
+
+
+/* Style the left side with the company info */
+
+.company-info {
+    flex: 1;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Add some transparency for better text readability */
+}
+
+.company-info h2,
+.company-info h3,
+.company-info p {
+    color: #fff;
+}
+
+.company-info h2,
+.contact-form h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.company-info h3 {
+    line-height: 50px;
+    font-weight: bold;
+}
+
+
+/* Style the right side with the contact form */
+
+.contact-form {
+    flex: 1;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Add some transparency for better text readability */
+    max-width: 80%;
+}
+
+.contact-form h2,
+.contact-form label,
+.contact-form button {
+    color: #fff;
+}
+
+
+/* Style form labels and inputs */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Style the submit button */
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    //margin: 0 270px;
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,78 @@
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-nav {
+    justify-content: flex-end;
+    list-style: none;
+    display: flex;
+    background-color: #142D53;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.top-nav li {
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-right: 15px;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    /* Center the container */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    /* Set the max-width to 913px */
+    width: 100%;
+    //margin: 20px 20px;
+    padding: 0 20px 0 20px;
+    /* Adjust padding as needed */
+}
+
+.logo img {
+    //position: absolute;;
+    width: 106px;
+    height: 75px;
+    left: 5%;
+    display: flex;
+    top: 8%;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-list a {
+    height: 50px;
+    line-height: 24px;
+    color: #142D53;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 15px;
+    /* Adjust margin as needed */
+}
+
+.header {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

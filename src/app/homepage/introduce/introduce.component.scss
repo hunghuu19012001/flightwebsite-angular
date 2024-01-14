@@ -1,0 +1,198 @@
+/* Apply a basic reset to remove default margin and padding */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+.introduce-l p {
+    margin-bottom: 15px;
+    //width: 100%;
+    color: #9BA3B0;
+}
+.introduce-l span{
+    font-weight: bold;
+}
+
+// /* Style the container */
+ .introduce {
+     max-width: 95%;
+     margin: 0 auto;
+     padding: 20px;
+     font-family: Arial, sans-serif;
+     display: flex;
+ }
+
+// /* Style the left section */
+ .introduce-l {
+     flex: 1;
+     }
+
+// /* Style the heading */
+ .introduce-l h1 {
+     color: #5A6372;
+     font-family: Plus Jakarta Sans;
+     font-size: 30px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: 44px;
+ }
+.introduce-l-1 img{
+    margin-bottom: 5px;
+}
+.introduce-l-2 img{
+    margin-bottom: -5px;
+}
+// /* Style the subheading */
+ .introduce-l h2 {
+     font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+     font-weight: 400;
+     line-height: 24px;
+ }
+
+
+// /* Style the paragraph */
+
+
+// /* Style the address and phone number containers */
+ .introduce-l div {
+     margin-bottom: 20px;
+ }
+
+
+// /* Style the right section */
+.introduce-r {
+     flex: 1;
+ }
+ .introduce-r {
+    overflow: hidden; /* Đảm bảo ảnh không tràn ra khỏi phần tử cha */
+    border-radius: 50%; /* Chuyển hình ảnh thành hình tròn */
+    width: 476px; /* Điều chỉnh kích thước ảnh theo nhu cầu */
+    height: 350px;
+    position: relative;
+  }
+  
+  .introduce-r img {
+    width: 100%; /* Đảm bảo ảnh lấp đầy phần tử cha */
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+    margin-top: -90px;
+  }
+
+  .introduce-r:hover img {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi di chuột qua */
+  }
+  
+
+
+  /////////////
+
+  /* Container styling */
+.whyus {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0; /* Add margin for spacing */
+  }
+  
+  /* Individual item styling */
+  .whyus > div {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%; /* Adjust the width as needed */
+    transition: transform 0.3s ease-in-out; /* Add a subtle transition effect */
+  }
+  
+  /* Styling for mat-icon */
+
+  /* Hover effect on individual item */
+  .whyus > div:hover {
+    transform: scale(1.05); /* Add a slight scale effect on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+  }
+  
+  /* Heading styling */
+  h3 {
+    margin-top: 10px; /* Add spacing above h3 */
+  }
+  
+  /* Subheading styling */
+  h5 {
+    color: #777; /* Set a slightly muted color for subheadings */
+  }
+  
+
+
+  /////
+  .email-form-container {
+    max-width: 75%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  label,
+  input,
+  button {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    flex-basis: 100%;
+  }
+  
+  input {
+    flex-basis: calc(70% - 10px); /* Chiếm 70% chiều rộng, trừ đi khoảng cách */
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    
+  }
+  
+  button {
+    flex-basis: calc(30% - 10px); /* Chiếm 30% chiều rộng, trừ đi khoảng cách */
+    background-color: var(--Primary, #193080);
+    border: none;
+    border-radius: 8px;
+    color: #F2F2F2;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+}
+  .introduce-email-form-container{
+    width: 100%;
+    background-color: #DDE6F6;
+  }
+
+  .email-form-container h2{
+    color: var(--Netral, #17191D);
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px;
+  }
+  .email-form-container h3{
+    color: var(--netral-v2, #5A6372);
+    text-align: center;
+/* body-small */
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }

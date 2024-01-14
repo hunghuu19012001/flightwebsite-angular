@@ -1,0 +1,273 @@
+.fasttrack-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    color: #FFF;
+    //background-color: #ccc;
+}
+
+.fasttrack-container-all {
+    background-image: url('/assets/images/bgcontact.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.fasttrack-container-all-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+}
+
+.fasktrack-all {
+    // background-image: url('/assets/images/bgcontact.jpg');
+    // /* Updated image path */
+    // background-size: cover;
+    // background-position: center;
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.fasktrack-bg {
+    //background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 40px;
+    display: flex;
+}
+
+.fasktrack-highlight,
+.what-to-expect,
+.good-to-know {
+    margin-top: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #f3f3f3;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-select {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    --mat-mdc-form-field-floating-label-scale: 0.75;
+    display: block;
+    /* Sử dụng display block thay vì inline-flex */
+    flex-direction: column;
+    min-width: 0;
+    text-align: left;
+}
+
+.numberflight,
+.arrival-time {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.arrival-time {
+    height: 100px;
+    input {
+        border-radius: 8px;
+        font-size: 16px;
+    }
+}
+
+.custom-theme-example {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.passenger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.passenger-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.passenger-input input {
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 30px;
+    //justify-content: space-between;
+    /* Căn giữa giữa hai button */
+    text-align: center;
+    /* Căn chữ giữa input */
+}
+
+.passenger-input button {
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    justify-content: space-between;
+    /* Căn giữa giữa hai button */
+    width: 36px;
+}
+
+.passenger-input button:hover {
+    background-color: #696969;
+    cursor: pointer;
+    /* Thay đổi hình dạng con trỏ khi hover */
+    border-radius: 16px;
+}
+
+.passenger label {
+    font-size: 16px;
+}
+
+.passenger-input button {
+    margin: 0 5px;
+}
+
+.booknow {
+    background-color: var(--Secondary, #BB1113);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    //width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.booknow:hover {
+    background-color: #800000;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Optional: Style for input[type="number"] spinner arrows */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.price-total {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+////////highlight
+.fasktrack-highlight {
+    color: black;
+}
+
+////
+///
+/// 
+h1 {
+    color: black;
+    font-size: 32px;
+    line-height: 1.32;
+    font-weight: bold;
+    color: #212121;
+    margin-top: 10px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0 20px 0;
+}
+
+li {
+    margin: 15px 0 15px 0;
+}
+
+.col-line {
+    width: 5px;
+    height: 20px;
+    background-color: #c00;
+    margin-top: 4px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.head-title {
+    display: flex;
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.fasttrack-content {
+    max-width: 80%;
+}
+
+.book-box {
+    max-width: 20%;
+    width: 20%;
+    border: 1px solid #e6e6e6;
+    height: 100px;
+    border-radius: 16px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.book-box-button button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 16px;
+    background-color: #193080;
+    color: #ffffff;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.book-box-price span {
+    line-height: bold;
+    font-size: 30px;
+}
+
+.what-to-expect p {
+    margin-left: 20px;
+}
+
+.fasktrack-all img {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    border-radius: 16px;
+}

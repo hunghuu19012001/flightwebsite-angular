@@ -1,0 +1,128 @@
+<div class="banner">
+    <img src="assets\images\bgcontact.jpg" alt="banner" class="banner-img">
+    <div class="banner-content">
+        <h1 class="banner-title">Your best deals to Vietnam and beyond!</h1>
+        <h2 class="banner-subtitile">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+    </div>
+
+
+
+
+    <div class="banner-actionstype">
+        <button mat-raise-button class="actionstype-rt" (click)="selectTripType('roundTrip')">ROUND TRIP</button>
+        <button mat-raise-button class="actionstype-ow" (click)="selectTripType('oneWay')">ONE WAY</button>
+        <button mat-raise-button class="actionstype-mc" (click)="selectTripType('multiCity')" style="margin-left: 10px;">MULTI_CITY</button>
+    </div>
+
+    <div class="banner-actions">
+
+        <!-- input depart from ----------------------------------------------------------------------------- -->
+        <div class="depart-dropdown">
+            <input id="departFromInput" type="text" placeholder="Depart from" [(ngModel)]="selectedDeparture" (input)="onDepartureInputChange($event)">
+            <div class="depart-dropdown-menu" *ngIf="isDepartureDropdownVisible && filteredDepartureLocations.length > 0">
+                <button mat-raise-button *ngFor="let location of filteredDepartureLocations" (click)="selectDepartureLocation(location)">
+                        {{ location.name }} - {{ location.city }}, {{ location.country }}
+                    </button>
+            </div>
+        </div>
+        <!-- input arrive at ---------------------------------------------------------------------------------------------------------------->
+        <div class="arrive-dropdown">
+            <input id="arriveAtInput" type="text" placeholder="Arrive at" [(ngModel)]="selectedArrival" (input)="onArrivalInputChange($event)">
+            <div class="arrive-dropdown-menu" *ngIf="isArrivalDropdownVisible && filteredArrivalLocations.length > 0">
+                <button mat-raise-button *ngFor="let location of filteredArrivalLocations" (click)="selectArrivalLocation(location)">
+                    {{ location.name }} - {{ location.city }}, {{ location.country }}
+                </button>
+            </div>
+        </div>
+
+        <!-- input departure date------------------------------------------- -->
+        <!-- <div class="date-depart-container">
+            <label for="departureDate">Departing</label>
+            <input id="departureDate" type="date" [(ngModel)]="departureDate">
+        </div> -->
+
+        <div class="date-depart-container">
+            <mat-form-field appearance="fill" class="date-depart-container-mat">
+                <input matInput [matDatepicker]="departurePicker" [(ngModel)]="departureDate" id="departureDate" placeholder="Departing">
+                <mat-datepicker-toggle matSuffix [for]="departurePicker"></mat-datepicker-toggle>
+                <mat-datepicker #departurePicker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <!-- input return date------------------------------------------- -->
+        <!-- <div class="date-return-container" *ngIf="selectedTripType === 'roundTrip'">
+            <label for="returnDate">Returning</label>
+            <input id="returnDate" type="date" [(ngModel)]="returnDate" placeholder="Returning">
+        </div> -->
+        <!-- Ngày trở về -->
+        <!-- input return date------------------------------------------- -->
+        <div class="date-return-container" *ngIf="selectedTripType === 'roundTrip'">
+            <mat-form-field appearance="fill" class="date-return-container-mat">
+                <input matInput [matDatepicker]="returnPicker" [(ngModel)]="returnDate" id="returnDate" placeholder="Returning">
+                <mat-datepicker-toggle matSuffix [for]="returnPicker"></mat-datepicker-toggle>
+                <mat-datepicker #returnPicker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <!-- input passenger -------------------------------------------------------------------------------------->
+        <div class="passenger-dropdown" [ngClass]="{ 'show': isPassengerDropdownVisible }">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="passengerDropdown" (click)="togglePassengerDropdown()" aria-haspopup="true" aria-expanded="false">
+                <span class="badge badge-light">{{getTotalPassengers()}}</span> Passenger(s)
+                </button>
+            <div class="passenger-dropdown-menu" aria-labelledby="passengerDropdown" [hidden]="!isPassengerDropdownVisible">
+                <div class="passenger-option" *ngFor="let option of passengerOptions">
+                    <span>{{ option.label }}</span>
+                    <div class="quantity-controls">
+                        <button class="btn btn-sm btn-outline-secondary" (click)="decreaseQuantity(option)">-</button>
+                        <span>{{ option.quantity }}</span>
+                        <button class="btn btn-sm btn-outline-secondary" (click)="increaseQuantity(option)">+</button>
+                    </div>
+                </div>
+                <button class="btn btn-success" (click)="recordPassengerInfo()">Done</button>
+
+            </div>
+        </div>
+        <!-- input cabin------------------------------------------------------------------------------->
+        <div class="cabin-dropdown" [ngClass]="{ 'show': isCabinDropdownVisible }">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="cabinDropdown" (click)="toggleCabinDropdown()" aria-haspopup="true" aria-expanded="false">
+                     {{ selectedCabin || 'Cabin' }}
+                </button>
+            <div class="cabin-dropdown-menu" aria-labelledby="cabinDropdown" [hidden]="!isCabinDropdownVisible">
+                <button class="dropdown-item" (click)="selectCabin('Economy')">Economy</button>
+                <button class="dropdown-item" (click)="selectCabin('Premium')">Premium</button>
+                <button class="dropdown-item" (click)="selectCabin('Business')">Business</button>
+                <button class="dropdown-item" (click)="selectCabin('First')">First</button>
+            </div>
+        </div>
+
+
+        <button class="search" mat-raise-button style="border-radius: 0px 12px 12px 0px;background: var(--Secondary, #BB1113);color: #FFF; display: flex; justify-content: center;">
+                Search
+        </button>
+
+    </div>
+    <div class="multi" *ngIf="selectedTripType === 'multiCity'">
+        <!-- Input cho điểm xuất phat -->
+        <div class="depart-dropdown">
+            <input id="departFromInput" type="text" placeholder="Depart from" [(ngModel)]="selectedDeparture" (input)="onDepartureInputChange($event)">
+            <div class="depart-dropdown-menu" *ngIf="isDepartureDropdownVisible && filteredDepartureLocations.length > 0">
+                <button mat-raise-button *ngFor="let location of filteredDepartureLocations" (click)="selectDepartureLocation(location)">
+                        {{ location.name }} - {{ location.city }}, {{ location.country }}
+                </button>
+            </div>
+        </div>
+        <div class="arrive-dropdown">
+            <input id="arriveAtInput" type="text" placeholder="Arrive at" [(ngModel)]="selectedArrival" (input)="onArrivalInputChange($event)">
+            <div class="arrive-dropdown-menu" *ngIf="isArrivalDropdownVisible && filteredArrivalLocations.length > 0">
+                <button mat-raise-button *ngFor="let location of filteredArrivalLocations" (click)="selectArrivalLocation(location)">
+                    {{ location.name }} - {{ location.city }}, {{ location.country }}
+                </button>
+            </div>
+        </div>
+        <div *ngFor="let city of selectedCities">
+            {{ city }}
+            <button (click)="removeCity">Remove</button>
+        </div>
+    </div>
+
+</div>

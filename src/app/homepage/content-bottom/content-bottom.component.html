@@ -1,0 +1,11 @@
+<div class="main-popular-detail">
+    <div class="main-popular-detail-text">
+        <h1>HẠ LONG</h1>
+        <h3>Vịnh Hạ Long, một diều kỳ quan thiên nhiên tại Việt Nam, nổi tiếng với hơn 1.600 đảo đá vôi hùng vĩ nổi lên từ biển xanh, tạo nên bức tranh hùng vĩ, huyền bí và là một trong những danh thắng thiên nhiên hàng đầu thế giới.</h3>
+    </div>
+    <ngx-slick-carousel class="main-popular-detail-slide" #slickModal="slick-carousel" [config]="slide2Config" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slide2" class="slide">
+            <img src="{{slide.img}}" alt="">
+        </div>
+    </ngx-slick-carousel>
+</div>
